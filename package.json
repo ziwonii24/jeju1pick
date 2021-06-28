@@ -1,0 +1,66 @@
+{
+  "name": "jeju1pick",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.config.prod",
+    "start": "webpack serve --config ./config/webpack.config.dev",
+    "prepare": "husky install",
+    "lint-staged": "npx lint-staged"
+  },
+  "dependencies": {
+    "@babel/core": "7.14.6",
+    "@babel/preset-env": "7.14.7",
+    "@babel/preset-react": "7.14.5",
+    "@reduxjs/toolkit": "1.6.0",
+    "@types/axios": "0.14.0",
+    "@types/react": "17.0.11",
+    "@types/react-dom": "17.0.8",
+    "@typescript-eslint/eslint-plugin": "4.28.0",
+    "@typescript-eslint/parser": "4.28.0",
+    "axios": "0.21.1",
+    "babel-loader": "8.2.2",
+    "clean-webpack-plugin": "4.0.0-alpha.0",
+    "css-loader": "5.2.6",
+    "dotenv": "10.0.0",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "5.3.2",
+    "mini-css-extract-plugin": "1.6.1",
+    "node-sass": "6.0.1",
+    "react": "17.0.2",
+    "react-bootstrap": "1.6.1",
+    "react-dom": "17.0.2",
+    "react-redux": "7.2.4",
+    "redux": "4.1.0",
+    "redux-saga": "1.1.3",
+    "redux-thunk": "2.3.0",
+    "sass-loader": "12.1.0",
+    "typescript": "4.3.4",
+    "webpack": "5.40.0",
+    "webpack-cli": "4.7.2",
+    "webpack-dev-server": "3.11.2",
+    "webpack-merge": "5.8.0"
+  },
+  "devDependencies": {
+    "eslint": "7.29.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-react": "7.24.0",
+    "husky": "6.0.0",
+    "jest": "27.0.5",
+    "lint-staged": "11.0.0",
+    "prettier": "2.3.2",
+    "style-loader": "3.0.0"
+  },
+  "lint-staged": {
+    "*.tsx": [
+      "eslint --fix"
+    ],
+    "*.ts": [
+      "eslint --fix"
+    ]
+  }
+}
