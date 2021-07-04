@@ -3,6 +3,13 @@
     ["@babel/preset-env", {
       "targets": "> 0.25%, not dead"
     }],
-    "@babel/preset-react"
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "extensions": [".js", ".jsx", ".ts", ".tsx"]
+    }]
   ]
 }
