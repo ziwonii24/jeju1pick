@@ -4,12 +4,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   entry: './src/index.tsx',
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    modules: ['./node_modules'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   output: {
-    path: `${__dirname}/../dist`,
+    path: `${__dirname}/dist`,
     filename: 'output.[hash].js',
-    publicPath: '/',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -17,23 +18,23 @@ module.exports = {
       {
         test: /\.(js|ts|tsx|jsx)$/,
         exclude: /node_modules/,
-        use: [{ loader: 'babel-loader' }],
+        use: [{ loader: 'babel-loader' }]
       },
       {
         test: /\.png$/,
         use: [
           {
-            loader: 'file-loader',
-          },
-        ],
-      },
-    ],
+            loader: 'file-loader'
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html', // public/index.html 파일을 읽는다.
-      filename: 'index.html', // output으로 출력할 파일은 index.html 이다.
+      filename: 'index.html' // output으로 출력할 파일은 index.html 이다.
     }),
-    new CleanWebpackPlugin(),
-  ],
+    new CleanWebpackPlugin()
+  ]
 };
