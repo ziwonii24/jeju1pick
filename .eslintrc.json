@@ -38,6 +38,7 @@
         "optionalDependencies": true,
         "peerDependencies": true
       }
-    ]
+    ],
+    "linebreak-style": 0
   }
 }
