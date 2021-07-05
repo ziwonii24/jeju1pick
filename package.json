@@ -59,7 +59,7 @@
   },
   "lint-staged": {
     "*.tsx": [
-      "eslint"
+      "eslint --fix"
     ],
     "*.ts": [
       "eslint"
