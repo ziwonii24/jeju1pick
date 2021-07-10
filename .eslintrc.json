@@ -16,8 +16,20 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "simple-import-sort"],
   "rules": {
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          ["^react", "^(?!src)(?=@?\\w)"],
+          ["constants", "hooks", "reducers", "routes", "store", "types", "utils"],
+          ["views", "^\\.\\.(?!/?$)", "^\\.\\./?$", "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$", "components"],
+          ["assets", "^.+\\.s?css$"]
+        ]
+      }
+    ],
+    "import/order": "off",
     "import/extensions": [
       0, // 0 = off, 1 = warn, 2 = error
       {
@@ -39,6 +51,12 @@
         "peerDependencies": true
       }
     ],
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "object-curly-newline": "off",
+    "comma-dangle": "off",
+    "react/prop-types": "off",
+    "operator-linebreak": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error"
   }
 }

@@ -14,26 +14,21 @@ module.exports = {
   },
   module: {
     rules: [
-      // node modules 디렉토리르 제외한 다른 부분에 babel loader 적용
       {
         test: /\.(js|ts|tsx|jsx)$/,
         exclude: /node_modules/,
-        use: [{ loader: 'babel-loader' }]
+        use: ['babel-loader']
       },
       {
         test: /\.png$/,
-        use: [
-          {
-            loader: 'file-loader'
-          }
-        ]
+        use: ['file-loader']
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html', // public/index.html 파일을 읽는다.
-      filename: 'index.html' // output으로 출력할 파일은 index.html 이다.
+      template: './public/index.html',
+      filename: 'index.html'
     }),
     new CleanWebpackPlugin()
   ]

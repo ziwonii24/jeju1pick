@@ -9,24 +9,15 @@ module.exports = merge(common, {
       {
         test: /\.(sa|sc|c)ss$/i,
         // exclude: /node_modules/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-            },
-          },
-          'sass-loader',
-        ],
-      },
-    ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      }
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({
       linkType: false,
       filename: '[name].[contenthash].css',
-      chunkFilename: '[id].[contenthash].css',
-    }),
-  ],
+      chunkFilename: '[id].[contenthash].css'
+    })
+  ]
 });
