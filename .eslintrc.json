@@ -57,6 +57,9 @@
     "react/prop-types": "off",
     "operator-linebreak": "off",
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": "error"
+    "@typescript-eslint/no-shadow": "error",
+    "no-param-reassign": ["error", { "props": false }],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "implicit-arrow-linebreak": "off"
   }
 }
