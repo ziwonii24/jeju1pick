@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const dotenv = require('dotenv');
+dotenv.config();
 
 module.exports = {
   entry: './src/index.tsx',
@@ -28,7 +30,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      environment: process.env.REACT_APP_KAKAO_MAP_KEY
     }),
     new CleanWebpackPlugin()
   ]
