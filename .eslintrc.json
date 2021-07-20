@@ -23,8 +23,24 @@
       {
         "groups": [
           ["^react", "^(?!src)(?=@?\\w)"],
-          ["constants", "hooks", "reducers", "routes", "store", "types", "utils"],
-          ["views", "^\\.\\.(?!/?$)", "^\\.\\./?$", "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$", "components"],
+          [
+            "constants",
+            "hooks",
+            "reducers",
+            "routes",
+            "store",
+            "types",
+            "utils"
+          ],
+          [
+            "views",
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$",
+            "components"
+          ],
           ["assets", "^.+\\.s?css$"]
         ]
       }
@@ -60,6 +76,7 @@
     "@typescript-eslint/no-shadow": "error",
     "no-param-reassign": ["error", { "props": false }],
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "implicit-arrow-linebreak": "off"
+    "implicit-arrow-linebreak": "off",
+    "import/prefer-default-export": "warn"
   }
 }

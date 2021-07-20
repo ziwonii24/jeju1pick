@@ -31,7 +31,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html',
-      environment: process.env.REACT_APP_KAKAO_MAP_KEY
+      environment: process.env.REACT_APP_KAKAO_KEY
     }),
     new CleanWebpackPlugin()
   ]
